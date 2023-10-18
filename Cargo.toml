@@ -1,0 +1,17 @@
+[package]
+name = "hurlalot_web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+leptos = { version= "0.5.1",default-features = false, features=["csr","serde"]}
+leptos_router = { version= "0.5.1",default-features = false, features=["csr"]}
+async-trait = "0.1.68"
+serde = "1.0.164"
+
+log = "0.4"
+console_log = "1"
+console_error_panic_hook = "0.1.7"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.0"
