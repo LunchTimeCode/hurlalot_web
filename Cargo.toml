@@ -18,7 +18,7 @@ console_error_panic_hook = "0.1.7"
 leptos-use = "0.7.1"
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.0"
+wasm-bindgen-test = "0.3.37"
 
 [build-dependencies]
 leptonic-theme = "0.2.0"
