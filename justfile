@@ -20,12 +20,13 @@ test:
     cargo test --target wasm32-unknown-unknown
 
 # Perform all verifications (compile, test, lint etc.)
-verify: lint
+verify: lint 
 
 # Run the static code analysis
 lint:
-    leptosfmt src --check
-    cargo fmt --check
+	leptosfmt src --check
+	cargo fmt --check
+	cargo clippy
 
 clean:
 	rm -rf target

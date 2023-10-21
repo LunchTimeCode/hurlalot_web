@@ -1,0 +1,58 @@
+@import "../generated/leptonic/leptonic-themes";
+
+
+[data-theme="dark"] {
+  --brand-color: #e66956;
+
+  --drawer-background-color: none;
+  --drawer-box-shadow: none;
+}
+
+.nav-ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  vertical-align: center;
+  align-items: center;
+  background-color: #333;
+}
+
+body {margin:0;padding:0}
+
+.nav-title{
+  float: left;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.nav-li {
+  float: left;
+}
+
+.nav-li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-li a:hover {
+  background-color: #111;
+}
+
+.nav-wrapper{
+  align-content: center;
+}
+
+.code-editor{
+  color: white;
+  background-color: #111;
+}
