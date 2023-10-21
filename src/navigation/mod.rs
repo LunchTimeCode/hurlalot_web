@@ -14,35 +14,41 @@ const NAVLIST: &str = "flex flex-col p-4 md:p-0 mt-4 font-medium border border-g
 #[component]
 pub fn XRouter() -> impl IntoView {
     view! {
-      <div id="root">
-        <Router>
-          // <nav> and <main> will show on every rout
-          <nav class=NAVB>
-      <div class=NAVLIST>
-          <p class=TITLE> Hurlalot </p>
-          <ul class=NAVLIST >
-          <li class="">
-             <A href="editor" class=NAVT >"Editor"</A>
-          </li>
-          <li class="">
-            // But we can also use a normal class attribute like it is a normal component
-            <A href="settings" class=NAVT >"Settings"</A>
-            </li>
-            <li class="">
-            // It also supports signals!
-            <A href="about" class=move || NAVT>"About"</A>
-            </li>
-            </ul>
-       </div>
-          </nav>
-          <main>
-            <Routes>
-              <Route path="editor" view=move || view! { <Editor/> } >  </Route>
-              <Route path="settings" view=move || view! {  <Settings/> } > </Route>
-              <Route path="about" view=move || view! {  <About/> } > </Route>
-            </Routes>
-          </main>
-        </Router>
-      </div>
+        <div id="root">
+            <Router>
+                // <nav> and <main> will show on every rout
+                <nav class=NAVB>
+                    <div class=NAVLIST>
+                        <p class=TITLE>Hurlalot</p>
+                        <ul class=NAVLIST>
+                            <li class="">
+                                <A href="editor" class=NAVT>
+                                    "Editor"
+                                </A>
+                            </li>
+                            <li class="">
+                                // But we can also use a normal class attribute like it is a normal component
+                                <A href="settings" class=NAVT>
+                                    "Settings"
+                                </A>
+                            </li>
+                            <li class="">
+                                // It also supports signals!
+                                <A href="about" class=move || NAVT>
+                                    "About"
+                                </A>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main>
+                    <Routes>
+                        <Route path="editor" view=move || view! { <Editor/> }/>
+                        <Route path="settings" view=move || view! { <Settings/> }/>
+                        <Route path="about" view=move || view! { <About/> }/>
+                    </Routes>
+                </main>
+            </Router>
+        </div>
     }
 }

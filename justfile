@@ -24,7 +24,8 @@ verify: lint
 
 # Run the static code analysis
 lint:
-	cargo fmt --check
+    leptosfmt src --check
+    cargo fmt --check
 
 clean:
 	rm -rf target
@@ -33,6 +34,7 @@ clean:
 
 
 fmt:
+  leptosfmt src -c leptosfmt.toml
   cargo fmt
 
 
