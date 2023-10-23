@@ -13,7 +13,7 @@ use web_time::Duration;
 pub fn FileEditor() -> impl IntoView {
     let (shown, set_shown) = create_signal(false);
 
-    let (api_url, set_api_url) = create_signal("http://127.0.0.1:3721".to_string());
+    let (api_url, set_api_url) = create_signal("https://hurlalot.shuttleapp.rs".to_string());
 
     let (content, set_content) = create_signal("".to_string());
     let (content_to_parse, set_content_to_parse) = create_signal("".to_string());
