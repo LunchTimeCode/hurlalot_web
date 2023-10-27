@@ -33,9 +33,10 @@ pub fn XRouter() -> impl IntoView {
                 </nav>
                 <main>
                     <Routes>
-                        <Route path="/editor" view=move || view! { <Editor/> }/>
-                        <Route path="/settings" view=move || view! { <Settings/> }/>
-                        <Route path="/about" view=move || view! { <About/> }/>
+                        <Route path="" view=move || view! { <Editor/> }/>            
+                        <Route path="hurlalot_web/editor" view=move || view! { <Editor/> }/>
+                        <Route path="hurlalot_web/settings" view=move || view! { <Settings/> }/>
+                        <Route path="hurlalot_web/about" view=move || view! { <About/> }/>
                     </Routes>
                 </main>
             </Router>
