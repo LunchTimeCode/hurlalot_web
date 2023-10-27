@@ -1,15 +1,20 @@
 use leptonic::prelude::*;
 use leptos::*;
-mod about;
 mod editor;
-mod navigation;
-mod settings;
+
+use editor::Editor;
 
 pub fn main() {
     mount_to_body(|| {
         view! {
             <Root default_theme=LeptonicTheme::default()>
-                <navigation::XRouter></navigation::XRouter>
+                <div class="nav-wrapper">
+                    <ul class="nav-ul">
+                        <h1 class="nav-title">Hurlalot</h1>
+                    </ul>
+                </div>
+
+                <Editor/>
             </Root>
         }
     })

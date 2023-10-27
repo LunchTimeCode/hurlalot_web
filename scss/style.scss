@@ -1,8 +1,14 @@
 @import "../generated/leptonic/leptonic-themes";
 
+[data-theme="light"] {
+  --brand-color: #20124d;
+
+  --drawer-background-color: none;
+  --drawer-box-shadow: none;
+}
 
 [data-theme="dark"] {
-  --brand-color: #e66956;
+  --brand-color: #20124d;
 
   --drawer-background-color: none;
   --drawer-box-shadow: none;
@@ -34,19 +40,6 @@ body {margin:0;padding:0}
   float: left;
 }
 
-.nav-li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  vertical-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-.nav-li a:hover {
-  background-color: #111;
-}
 
 .nav-wrapper{
   align-content: center;

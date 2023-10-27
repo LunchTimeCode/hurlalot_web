@@ -2,9 +2,11 @@ use crate::editor::analyze::parse;
 use leptonic::prelude::Button;
 use leptonic::prelude::Drawer;
 use leptonic::prelude::DrawerSide;
+use leptonic::prelude::LeptonicTheme;
 use leptonic::prelude::Size;
 use leptonic::prelude::Stack;
 use leptonic::prelude::TextInput;
+use leptonic::prelude::ThemeToggle;
 use leptos::leptos_dom::helpers::IntervalHandle;
 use leptos::*;
 use web_time::Duration;
@@ -26,8 +28,9 @@ pub fn FileEditor() -> impl IntoView {
         move || content_to_parse.get(),
         // every time `count` changes, this will run
         move |value| async move {
+            let url = api_url.get_untracked();
             logging::log!("loading data from API");
-            let parse_res = parse(&value, &format!("{}/api/parse", &api_url.get())).await;
+            let parse_res = parse(&value, &format!("{}/api/parse", &url)).await;
             if let Some(res) = parse_res {
                 set_result.set(res)
             } else {
@@ -57,7 +60,12 @@ pub fn FileEditor() -> impl IntoView {
             style="padding: 0.5em; height: 19.5em; overflow: scroll; position: absolute; top: 0; right: 0; background-color: var(--brand-color); border-left: 1px solid gray;"
         >
             <Stack spacing=Size::Em(0.5)>
-                <TextInput get=api_url set=set_api_url/>
+                <div class="code-editor-box">
+                    <TextInput get=api_url set=set_api_url/>
+
+                    <ThemeToggle off=LeptonicTheme::Light on=LeptonicTheme::Dark/>
+                </div>
+
             </Stack>
         </Drawer>
         <div class="code-editor-box">
