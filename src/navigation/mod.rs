@@ -17,15 +17,15 @@ pub fn XRouter() -> impl IntoView {
                         <ul class="nav-ul">
                             <h1 class="nav-title">Hurlalot</h1>
                             <li class="nav-li">
-                                <A href="editor">"Editor"</A>
+                                <A href="hurlalot_web/editor">"Editor"</A>
                             </li>
                             <li class="nav-li">
                                 // But we can also use a normal class attribute like it is a normal component
-                                <A href="settings">"Settings"</A>
+                                <A href="hurlalot_web/settings">"Settings"</A>
                             </li>
                             <li class="nav-li">
                                 // It also supports signals!
-                                <A href="about">"About"</A>
+                                <A href="hurlalot_web/about">"About"</A>
                             </li>
 
                         </ul>
@@ -33,9 +33,9 @@ pub fn XRouter() -> impl IntoView {
                 </nav>
                 <main>
                     <Routes>
-                        <Route path="editor" view=move || view! { <Editor/> }/>
-                        <Route path="settings" view=move || view! { <Settings/> }/>
-                        <Route path="about" view=move || view! { <About/> }/>
+                        <Route path="hurlalot_web/editor" view=move || view! { <Editor/> }/>
+                        <Route path="hurlalot_web/settings" view=move || view! { <Settings/> }/>
+                        <Route path="hurlalot_web/about" view=move || view! { <About/> }/>
                     </Routes>
                 </main>
             </Router>
