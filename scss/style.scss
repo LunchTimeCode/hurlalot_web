@@ -1,14 +1,14 @@
 @import "../generated/leptonic/leptonic-themes";
 
 [data-theme="light"] {
-  --brand-color: #20124d;
+  --brand-color: #CC5500;
 
   --drawer-background-color: none;
   --drawer-box-shadow: none;
 }
 
 [data-theme="dark"] {
-  --brand-color: #20124d;
+  --brand-color: #996515;
 
   --drawer-background-color: none;
   --drawer-box-shadow: none;
@@ -46,6 +46,10 @@ body {margin:0;padding:0}
 }
 
 .code-editor{
+  width: 100%;
   color: white;
   background-color: #111;
+}
+
+.code-editor-box{
 }

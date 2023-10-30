@@ -2,7 +2,6 @@ mod analyze;
 mod fileedit;
 
 use fileedit::FileEditor;
-use leptonic::prelude::*;
 use leptos::*;
 
 #[component]

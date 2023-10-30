@@ -27,7 +27,7 @@ pub async fn parse(content: &str, api: &str) -> Option<String> {
         .ok()?;
 
     let res = match raw.error {
-        None => "All good".to_string(),
+        None => "all good".to_string(),
         Some(err) => err.message,
     };
     Some(res)

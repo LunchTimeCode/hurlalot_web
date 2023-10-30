@@ -1,8 +1,11 @@
 use crate::editor::analyze::parse;
 use leptonic::prelude::Button;
+use leptonic::prelude::Col;
 use leptonic::prelude::Drawer;
 use leptonic::prelude::DrawerSide;
+use leptonic::prelude::Grid;
 use leptonic::prelude::LeptonicTheme;
+use leptonic::prelude::Row;
 use leptonic::prelude::Size;
 use leptonic::prelude::Stack;
 use leptonic::prelude::TextInput;
@@ -70,24 +73,55 @@ pub fn FileEditor() -> impl IntoView {
         </Drawer>
         <div class="code-editor-box">
             <Stack spacing=Size::Em(0.6)>
-                <textarea
-                    class="code-editor"
-                    type="text"
-                    on:input=move |ev| {
-                        set_content.set(event_target_value(&ev));
-                    }
 
-                    prop:value=content.get()
-                    rows=40
-                    style="margin: 10px; width: 80%"
-                ></textarea>
-                <Button on_click=move |_| { set_shown.set(!shown.get()) }>Editor Settings</Button>
+                <Grid spacing=Size::Em(0.6) style="">
+
+                    <Row>
+                        // editor region
+                        <Col md=6 sm=1 xs=1>
+                            <textarea
+                                class="code-editor"
+                                type="text"
+                                on:input=move |ev| {
+                                    set_content.set(event_target_value(&ev));
+                                }
+
+                                prop:value=content.get()
+                                rows=40
+                                style="margin: 10px;"
+                            ></textarea>
+                        </Col>
+                        // editor region end
+
+                        // output region start
+                        <Col md=0 sm=1 xs=1>
+
+                            <Grid spacing=Size::Em(0.6) style="">
+                                <Row>
+                                    <Col md=0 sm=1 xs=1>
+                                        <p>{result}</p>
+                                    </Col>
+                                </Row>
+
+                            </Grid>
+
+                        </Col>
+                    // output region end
+                    </Row>
+
+                    // settings region start
+                    <Row>
+                        <Col md=3 sm=4 xs=6>
+                            <Button on_click=move |_| {
+                                set_shown.set(!shown.get())
+                            }>Editor Settings</Button>
+                        </Col>
+                    </Row>
+                </Grid>
+            // settings region end
             </Stack>
 
         </div>
-
-        <p>result:</p>
-        <p>{result}</p>
     }
 }
 
