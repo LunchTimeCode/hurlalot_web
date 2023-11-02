@@ -1,6 +1,6 @@
 mod analyze;
-mod fileedit;
 mod cmpx_editor;
+mod fileedit;
 
 use fileedit::FileEditor;
 use leptos::*;

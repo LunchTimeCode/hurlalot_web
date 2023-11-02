@@ -1,3 +1,4 @@
+use super::cmpx_editor::CmpxEditor;
 use crate::editor::analyze::parse;
 use leptonic::prelude::Button;
 use leptonic::prelude::Col;
@@ -13,7 +14,6 @@ use leptonic::prelude::ThemeToggle;
 use leptos::leptos_dom::helpers::IntervalHandle;
 use leptos::*;
 use web_time::Duration;
-use super::cmpx_editor::CmpxEditor;
 
 #[component]
 pub fn FileEditor() -> impl IntoView {
@@ -80,7 +80,7 @@ pub fn FileEditor() -> impl IntoView {
                     <Row>
                         // editor region
                         <Col md=6 sm=1 xs=1>
-                           <CmpxEditor content=content set_content=set_content/>
+                            <CmpxEditor content=content set_content=set_content/>
                         </Col>
                         // editor region end
 
