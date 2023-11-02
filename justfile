@@ -14,7 +14,7 @@ watch:
 	cargo watch -c -- just verify
 
 run:
-   trunk serve
+   trunk serve --open
 
 test:
     cargo test --target wasm32-unknown-unknown

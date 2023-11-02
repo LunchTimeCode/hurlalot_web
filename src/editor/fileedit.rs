@@ -13,6 +13,7 @@ use leptonic::prelude::ThemeToggle;
 use leptos::leptos_dom::helpers::IntervalHandle;
 use leptos::*;
 use web_time::Duration;
+use super::cmpx_editor::CmpxEditor;
 
 #[component]
 pub fn FileEditor() -> impl IntoView {
@@ -79,17 +80,7 @@ pub fn FileEditor() -> impl IntoView {
                     <Row>
                         // editor region
                         <Col md=6 sm=1 xs=1>
-                            <textarea
-                                class="code-editor"
-                                type="text"
-                                on:input=move |ev| {
-                                    set_content.set(event_target_value(&ev));
-                                }
-
-                                prop:value=content.get()
-                                rows=40
-                                style="margin: 10px;"
-                            ></textarea>
+                           <CmpxEditor content=content set_content=set_content/>
                         </Col>
                         // editor region end
 
