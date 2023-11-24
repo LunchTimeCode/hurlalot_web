@@ -17,7 +17,7 @@ log = "0.4"
 console_log = "1"
 console_error_panic_hook = "0.1.7"
 leptos-use = "0.8.1"
-web-time = "0.2.0"
+web-time = "0.2.3"
 reqwasm = "0.5"
 
 [dev-dependencies]
