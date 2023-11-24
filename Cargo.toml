@@ -21,7 +21,7 @@ web-time = "0.2.0"
 reqwasm = "0.5"
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.0"
+wasm-bindgen-test = "0.3.38"
 
 [build-dependencies]
 leptonic-theme = "0.3.0"
