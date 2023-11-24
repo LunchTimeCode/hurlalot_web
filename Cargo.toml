@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-leptos = { version= "0.5.1",default-features = false, features=["csr","serde"]}
+leptos = { version= "0.5.2",default-features = false, features=["csr","serde"]}
 leptos_router = { version= "0.5.1",default-features = false, features=["csr"]}
 leptonic = { git = "https://github.com/lpotthast/leptonic" }
 
